@@ -200,6 +200,15 @@
         period = 60 * parseInt($("#minute").val()) + parseInt($("#second").val());
         $("#time").html("経過時間：0");
         $("#remain").html("残り時間：" + period);
+        $('#btnD').prop('disabled', false);
+        $('#btnC').prop('disabled',true);
+    }
+
+    function btnDClick(e){
+        active = false;
+        init();
+        $('#btnC').prop('disabled', false);
+        $('#btnD').prop('disabled',true);
     }
     
     // 繰り返し実行する処理
